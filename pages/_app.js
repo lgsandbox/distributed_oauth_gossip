@@ -9,11 +9,10 @@ function MyApp({ Component, pageProps }) {
 
   const [user, setUser] = useState();
 
-
   // If isLoggedIn is true, set the UserContext with user data
   // Otherwise, redirect to /login and set UserContext to { user: null }
   // this puts auth in the global state and allows us to protect routes
-  // dynamically anywhere in our application
+  // dynamically anywhere in our application with magic
 
   useEffect(() => {
     setUser({ loading: true });
@@ -27,10 +26,8 @@ function MyApp({ Component, pageProps }) {
     });
   }, []);
 
-
   return (
 
-   
     <UserContext.Provider value={[user, setUser]}>
         <ChakraProvider>
           <Component {...pageProps} />

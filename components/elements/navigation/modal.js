@@ -29,16 +29,14 @@ const [overlay, setOverlay] = useState(<OverlayOne />)
 // can change this logout to use context which holds magic library 
 // logout currently takes two clicks to work sometimes
 
-function logout() {
-  magic.user.logout();
-
-}
+const [user, setUser] = useContext(UserContext);
 
 
     return (
 
     <>
         <Button 
+                isLoading={user?.loading}
                 onClick={() => {
                     setOverlay(<OverlayOne />)
                     onOpen()

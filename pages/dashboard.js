@@ -1,8 +1,7 @@
 import Navbar from "../components/elements/navigation/navbar";
 import Profile from "../components/modules/auth/profile";
+import UserFeed from "../components/modules/posts/userFeed";
 import { VStack, Container } from "@chakra-ui/react";
-import { useContext } from "react";
-import { UserContext } from "../lib/context";
 
 export default function Dashboard() {
 
@@ -10,9 +9,9 @@ export default function Dashboard() {
 
     <div>
       <Navbar/>
-      <Container height ={200}/>
+      <Container height ={50}/>
       <Profile/>
-
+      <UserFeed/>
     </div>
   );
 }

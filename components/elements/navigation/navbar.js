@@ -72,16 +72,19 @@ import {
               {isLoggedIn ? <Link href={dash}>dashboard</Link> : null}
             </HStack>
             <Flex alignItems={'center'}>
+
+             
       
             {isLoggedIn ? (
                           <Button    
+                        
                           variant={'solid'}
                           colorScheme={'teal'}
                           size={'sm'}   
                           mr={4}
                           onClick={logout}>Disconnect
                           </Button> 
-                      ) : <BackdropModal />}
+                      ) : <BackdropModal/>}
 
 
               <Menu >

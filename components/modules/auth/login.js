@@ -9,25 +9,17 @@ function Login(){
   const [disabled, setDisabled] = useState(false);
   const [user, setUser] = useContext(UserContext);
 
-
-  // Redirect to /dashboard if thde user is logged in
-
   async function handleLoginWithEmail(email) {
     try {
 
       // disable login button to prevent multiple emails from being triggered
-
       setDisabled(true); 
-
-      // Trigger Magic link to be sent to user
-
       let didToken = await magic.auth.loginWithMagicLink({
         email,
         redirectURI: new URL('/dashboard', window.location.origin).href, // optional redirect back to your app after magic link is clicked
       });
 
-      // Validate didToken with server
-
+      // validate didToken with server
       const res = await fetch('/api/magic', {
         method: 'POST',
         headers: {
@@ -38,8 +30,7 @@ function Login(){
 
       if (res.status === 200) {
 
-        // Set the UserContext to the now logged in user
-
+        // Set the UserContext to the now logged in user redirect to dash with user data
         let userMetadata = await magic.user.getMetadata();
         await setUser(userMetadata);
         Router.push('/dashboard');
