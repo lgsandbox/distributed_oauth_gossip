@@ -16,8 +16,7 @@ import { UserContext } from "../../../lib/context";
 // initialize gun locally
 const gun = Gun({
   peers: [
-    'http://localhost:4000/gun',
-   
+
   ]
 })
 
