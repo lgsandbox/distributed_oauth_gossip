@@ -72,7 +72,6 @@ export default function GlobalFeed() {
             <Box
               maxW={'800px'}
               w={'full'}
-              bg={useColorModeValue('white', 'gray.900')}
               boxShadow={'2xl'}
               rounded={'md'}
               p={6}
