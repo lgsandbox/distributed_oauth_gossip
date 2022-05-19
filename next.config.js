@@ -1,5 +1,5 @@
 module.exports = {
-  exportTrailingSlash: true,
+  trailingSlash: true,
   reactStrictMode: false,
   exportPathMap: function() {
     return {
