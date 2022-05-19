@@ -17,7 +17,7 @@ import {
 import { CloseIcon, SettingsIcon } from '@chakra-ui/icons';
 import { MdBuild , MdCall } from "react-icons/md"
 import { UserContext } from "../../../lib/context";
-import FeedSTate  from "./feedState.js"
+
 
 const gun = Gun({
     peers: [
