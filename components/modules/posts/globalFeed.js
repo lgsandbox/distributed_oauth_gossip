@@ -34,7 +34,7 @@ function reducer(state, message) {
 }
 
 
-export default function feed() {
+export default function GlobalFeed() {
   
   const [user] = useContext(UserContext);
 

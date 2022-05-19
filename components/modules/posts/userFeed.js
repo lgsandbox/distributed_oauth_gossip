@@ -17,6 +17,7 @@ import {
 import { CloseIcon, SettingsIcon } from '@chakra-ui/icons';
 import { MdBuild , MdCall } from "react-icons/md"
 import { UserContext } from "../../../lib/context";
+import FeedSTate  from "./feedState.js"
 
 const gun = Gun({
     peers: [
@@ -33,7 +34,10 @@ function reducer(state, message) {
     messages: [message, ...state.messages]
 }}
 
+
+
 export default function UserFeed() {
+
     const [user] = useContext(UserContext);
     
     const [formState, setForm] = useState({
@@ -99,7 +103,6 @@ export default function UserFeed() {
             <Box
                 maxW={'850px'}
                 w={'full'}
-                bg={useColorModeValue('white', 'gray.900')}
                 boxShadow={'2xl'}
                 rounded={'md'}
                 p={6}
@@ -112,8 +115,9 @@ export default function UserFeed() {
                     <SettingsIcon/>
                     </Button>
                     </Flex>
-                    <h2 >message: {message.message}</h2>
                     <h3>User(email for now): {message.user} </h3>
+                    <h2 >message: {message.message}</h2>
+        
                     <p>Date: {message.createdAt}</p>
                 </Box>
             </Center>
