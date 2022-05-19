@@ -17,6 +17,7 @@ import { UserContext } from "../../../lib/context";
 const gun = Gun({
   peers: [
 
+   
   ]
 })
 

@@ -1,5 +1,9 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {
+module.exports = {
   reactStrictMode: false,
+  trailingSlash: true,
+  exportPathMap: function() {
+    return {
+      '/': { page: '/' },
+    }
 }
-
+}
