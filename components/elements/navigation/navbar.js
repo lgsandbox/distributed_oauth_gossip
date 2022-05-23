@@ -67,7 +67,7 @@ import {
                 as={'nav'}
                 spacing={4}
                 display={{ base: 'none', md: 'flex' }}>
-                <Link href={home}>/dogama</Link>
+                <Link href={home}>/dog</Link>
               </HStack>
               {isLoggedIn ? <Link href={dash}>dashboard</Link> : null}
             </HStack>
